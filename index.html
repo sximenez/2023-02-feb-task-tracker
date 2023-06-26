@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./view/style.css" />
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Front controller -->
+<script type="module">
+  // Load controllers
+  import { layout, header, main } from "./controllers.js";
+
+  // Try to fix components not loading
+  setTimeout(() => {
+    layout();
+    header();
+    main();
+  }, 500);
+
+  // Load routes
+  import { router } from "./routes.js";
+  router();
+</script>
